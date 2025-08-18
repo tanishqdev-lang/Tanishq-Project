@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>FUNCTIONS</title>
+</head>
+
+<body>
+  <button onclick="game('rock');console.log(score);
+     ">
+    rock
+  </button>
+  <button onclick="game('paper');console.log(score)
+    ">
+    paper
+  </button>
+  <button onclick="game('scissor'); console.log(score);">
+    scissor
+  </button>
+  <button onclick="resetButton()
+  console.log(score);">
+    reset scoressss
+  </button>
+  <script>
+
+    let score = {
+      wins: 0, 
+      loss: 0,
+      tie: 0
+
+    }
+    function game(playermove) {
+      let result = '';
+      if (playermove === `scissor`) {
+        computerMove = pickcomputermove()
+        if (computerMove === 'rock') {
+          alert(result = 'computer choose rock you lose');
+          console.log('you lose ')
+        }
+        else if (
+          computerMove === 'paper'
+        ) {
+          alert(result = 'computer choose paper you win')
+          console.log('you win')
+
+        }
+        else if (
+          computerMove === 'scissor'
+        ) {
+          alert(result = 'computer choose scissor it\'s a tie');
+          console.log('tie')
+        }
+        if (result === 'computer choose paper you win') {
+          score.wins+=1;
+        }
+        else if (result === 'computer choose rock you lose') {
+          score.loss += 1;
+        }
+        else if (result === 'computer choose scissor it\'s a tie') {
+          score.tie += 1;
+        }
+      }
+      else if (playermove === 'paper') {
+        computerMove = pickcomputermove();
+
+        if (
+          computerMove === 'rock'
+        ) {
+          alert(result = 'computer choose rock you won');
+          console.log('you win')
+        }
+        else if (
+          computerMove === 'paper'
+        ) {
+          alert(result = 'computer chooses paper it\'s tie');
+          console.log('tie')
+        }
+        else if (
+          computerMove === 'scissor'
+        ) {
+          alert(result = 'computer choose scissor you lose');
+          console.log('you lose ')
+        }
+        if (result === 'computer choose rock you won') {
+          score.wins += 1;
+        }
+        else if (result === 'computer choose scissor you lose') {
+          score.loss += 1;
+        }
+        else if (result === 'computer chooses paper it\'s tie') {
+          score.tie += 1;
+        }
+
+      }
+      else if (playermove === 'rock') {
+        computerMove = pickcomputermove();
+        if (computerMove === 'rock') {
+          alert(result = 'compuer choose rock it\'s a tie');
+          console.log('tie')
+        }
+        else if (computerMove === 'scissor') {
+          alert(result = 'computer choose \'scissor\' Players win');
+          console.log('you win ')
+        }
+        else if (computerMove === 'paper') {
+          alert(result = 'computer choose \'paper\' you lose')
+          console.log('you lose ')
+        }
+        if (result === 'computer choose \'scissor\' Players win') {
+          score.wins += 1;
+         
+        }
+        else if (result === 'computer choose \'paper\' you lose') {
+          score.loss += 1;
+        }
+        else if (result === 'compuer choose rock it\'s a tie') {
+          score.tie += 1;
+        }
+        
+
+      }
+   
+    }
+    function pickcomputermove() {
+      let computerMove = ' ';
+      const RandomNumber = Math.random();
+      if (RandomNumber >= 0 && RandomNumber < 1 / 3) {
+        computerMove = 'rock';
+      }
+      else if (
+        RandomNumber >= 1 / 3 && RandomNumber < 2 / 3
+      ) {
+        computerMove = 'paper';
+      }
+      else if (RandomNumber >= 2 / 3 && RandomNumber < 1) {
+        computerMove = 'scissor';
+      }
+      return computerMove;
+      console.log(score)
+    }
+    function resetButton() {
+      score = {
+        wins: 0,
+        loss: 0,
+        tie: 0
+      }
+    }
+  </script>
+
+
+</body>
+
+
+</html>

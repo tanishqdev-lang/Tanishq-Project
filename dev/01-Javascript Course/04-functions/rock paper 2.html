@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>FUNCTIONS</title>
+</head>
+
+<body>
+  <button onclick="game('rock')
+     ">
+    rock
+  </button>
+  <button onclick="game('paper')
+    ">
+    paper
+  </button>
+  <button onclick="game('scissor')">
+    scissor
+  </button>
+  <script>
+    function game(playermove) {
+      let result='';
+      if (playermove === `scissor`) {
+        computerMove = computersMove()
+        if (computerMove === 'rock') {
+          alert(result = 'computer chose rock you lose');
+          console.log('you loose ')
+        }
+        else if (
+          computerMove === 'paper'
+        ) {
+          alert(result = 'computer chose paper you win')
+          console.log('you win')
+        }
+        else if (
+          computerMove === 'scissor'
+        ) {
+          alert(result = 'computer chose scissor it\'s a tie');
+          console.log('tie')
+
+        }
+      }
+      else if (playermove === 'paper') {
+        computerMove = computersMove();
+
+        if (
+          computerMove === 'rock'
+        ) {
+          alert(result = 'computer chose rock you won');
+          console.log('you win')
+        }
+        else if (
+          computerMove === 'paper'
+        ) {
+          alert(result = 'computer choses paper it\'s tie');
+          console.log('tie')
+        }
+        else if (
+          computerMove === 'scissor'
+        ) {
+          alert(result = 'computer chose scissor you lose');
+          console.log('you loose ')
+        }
+
+      }
+      else if (playermove === 'rock') {
+        computerMove = computersMove();
+        if (computerMove === 'rock') {
+          alert(result = 'compuer chose rock it\'s a tie');
+          console.log('tie')
+        }
+        else if (computerMove === 'scissor') {
+          alert(result = 'computer chose \'scissor\' Players win');
+          console.log('you win ')
+        }
+        else if (computerMove === 'paper') {
+          alert(result = 'computer chose \'paper\' you loose')
+          console.log('you loose ')
+        }
+      }
+
+    }
+    function computersMove() {
+      let computerMove = ' ';
+      const RandomNumber = Math.random();
+      if (RandomNumber >= 0 && RandomNumber < 1 / 3) {
+        computerMove = 'rock';
+      }
+      else if (
+        RandomNumber >= 1 / 3 && RandomNumber < 2 / 3
+      ) {
+        computerMove = 'paper';
+      }
+      else if (RandomNumber >= 2 / 3 && RandomNumber < 1) {
+        computerMove = 'scissor';
+      }
+      return computerMove;
+    }
+  </script>
+
+
+</body>
+
+
+</html>

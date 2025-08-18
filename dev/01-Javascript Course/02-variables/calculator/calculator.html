@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>CALCULATOR</title>
+  <style>
+      .numbers{
+        size: 2cap;
+        font-style: oblique;
+        color: green;
+        background-color: yellow;
+        border-style: dashed;
+        size: 5cm;
+      }
+      .functions{
+        size: 2cap;
+        color: black;
+        background-color: yellow;
+        border-style: dashed;
+      }
+    h1{
+      text-align: center;
+      color: orange;
+    }
+    body{
+        background-color: black;
+        color: orange;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+  </style>
+  <h1>
+    CALCULATOR
+  </h1>
+</head>
+<body>
+  <p>
+  <button title="+1" class="numbers" onclick="calculation+='1';
+  console.log(calculation)">
+    1
+  </button>
+  <button title="+2" class="numbers" onclick="calculation+='2';
+  console.log(calculation)">
+    2
+  </button>
+  <button title="+3" class="numbers" onclick="calculation+='3';
+  console.log(calculation)">
+    3
+  </button>
+
+  
+</p>
+<button title="+4" class="numbers" onclick="calculation+='4';
+  console.log(calculation)">
+    4
+  </button>
+  <button title="+5" class="numbers" onclick="calculation+='5';
+  console.log(calculation)">
+    5
+  </button>
+  <button title="+6" class="numbers" onclick="calculation+='6';
+  console.log(calculation)">
+    6
+  </button>
+  
+  
+  <p>
+<button title="+7" class="numbers" onclick="calculation+='7';
+  console.log(calculation)">
+    7
+  </button>
+  <button title="+8" class="numbers" onclick="calculation+='8';
+  console.log(calculation)">
+    8
+  </button>
+  <button title="+9" class="numbers" onclick="calculation+='9';
+  console.log(calculation)">
+    9
+  </button>
+</p>
+<p>
+  <button title="+" class="functions" onclick="calculation+=' + ';
+  console.log(calculation)">
+  +
+  </button>
+  <button title="-" class="functions" onclick="calculation+=' - ';
+  console.log(calculation)">
+  -
+  </button>
+  <button title="*" class="functions" onclick="calculation+=' * ';
+  console.log(calculation)">
+  *
+  </button>
+  <button title="/" class="functions" onclick="calculation+=' / ';
+  console.log(calculation)">
+  /
+  </button>
+</p>
+<p>
+  
+  <button title="=" class="functions" onclick="calculation=eval(calculation);
+  console.log(calculation)">
+    =
+  </button>
+  <button title="CLEAR CONSOLE" class="functions" onclick="calculation=calculatio=0;
+  console.log(calculation)">
+    C
+  </button>
+</p>
+  <script>
+    let calculation="";
+  </script>
+
+</body>
+</html>

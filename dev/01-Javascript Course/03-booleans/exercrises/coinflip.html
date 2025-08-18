@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>title</title>
+</head>
+
+<body>
+  <p1>
+    CHOOSE WHICH SIDE YOU THINK WHEN COIN WILL BE TOSSED
+  </p1>
+  <br>
+  <p2>
+  <button onclick="guess='heads';
+const randomNumber=Math.random() 
+let result=randomNumber>0.5?'heads':'tails';
+console.log(`computer chose:${result}`)
+if(guess==result){
+  alert('you guessed right')
+}
+else{
+  alert(`you guessed wrong computer chose:${result}`);
+}
+">
+    heads
+  </button>
+  <button onclick="RandomNumber=Math.random();
+   result =RandomNumber<0.5? 'heads':'tails'
+   console.log(`computer choose: ${result}`);
+   guess='tails'
+   if(
+     guess==result
+    ){
+      alert('you guessed correct')
+    }
+    else{
+      alert('you guessed wrong')
+  }">
+    tails
+  </button>
+
+  </p2>
+</body>
+
+</html>
